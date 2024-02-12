@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const bienvenidaOverlay = document.getElementById("bienvenida");
     const formulario = document.getElementById("formulario");
-    const cargandoOverlay = document.getElementById("cargando");
     const despedidaOverlay = document.getElementById("despedida");
     
     bienvenidaOverlay.style.display = "flex";
@@ -38,20 +37,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const sexoSelect = document.getElementById("sexo");
     sexoSelect.addEventListener("change", function() {
-        alert(`Has seleccionado: ${sexoSelect.value}`);
+        console.log(`Has seleccionado: ${sexoSelect.value}`);
     });
   
     formulario.addEventListener("submit", function(event) {
         event.preventDefault();
   
         formulario.style.display = "none";
-        cargandoOverlay.style.display = "flex";
+        Swal.fire({
+            title: 'Generando historia',
+            html: 'Por favor, espera un momento...',
+            timerProgressBar: true,
+            didOpen: () => {
+                Swal.showLoading()
+            }
+        });
   
         const historia = obtenerDatosFormulario();
   
         setTimeout(function() {
-            cargandoOverlay.style.display = "none";
-            alert("Tu historia se ha generado correctamente");
+            Swal.close();
+            Swal.fire({
+                icon: 'success',
+                title: '¡Historia Generada!',
+                text: 'Tu historia se ha generado correctamente',
+            });
             agregarHistoria(historia);
             mostrarHistoria(historia);
             mostrarEstadisticas(historia.nombre);
