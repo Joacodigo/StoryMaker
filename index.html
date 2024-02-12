@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Generador de Historias</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <script src="./sistema.js">  </script>
+    <div class="container">
+        <h1>Generador de Historias</h1>
+        <button id="comenzarBtn">¡Comenzar!</button>
+        <form id="formulario" class="formulario">
+            <!-- Aquí van los campos del formulario -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" required>
+                <option value="femenino">Femenino</option>
+                <option value="masculino">Masculino</option>
+            </select>
+            <label for="gente">Gentilicio en plural:</label>
+            <input type="text" id="gente" required>
+            <label for="numeroTres">Año de un acontecimiento importante:</label>
+            <input type="number" id="numeroTres" required>
+            <label for="grito">Frase que dirías si un payaso te asusta:</label>
+            <input type="text" id="grito" required>
+            <label for="bicho">Nombre de un animal (en masculino):</label>
+            <input type="text" id="bicho" required>
+            <label for="objeto">Objeto con artículo incluido (ej:UNA escoba):</label>
+            <input type="text" id="objeto" required>
+            <label for="numeroUno">Cantidad aproximada de empanadas que compras cuando tienes hambre:</label>
+            <input type="number" id="numeroUno" required>
+            <label for="casa">Parte de tu casa con artículo (ej:EL baño):</label>
+            <input type="text" id="casa" required>
+            <label for="plan">Plan que sueles hacer con tus amigos:</label>
+            <input type="text" id="plan" required>
+            <label for="feo">Un adjetivo (en masculino):</label>
+            <input type="text" id="feo" required>
+            <label for="lugar">Lugar donde no irías nunca de vacaciones:</label>
+            <input type="text" id="lugar" required>
+            <label for="numeroDos">Horas que te llevaría cocinar una pizza desde cero:</label>
+            <input type="number" id="numeroDos" required>
+            <button type="submit">Generar Historia</button>
+        </form>
+        <div id="historiasGeneradas"></div>
+        <div id="estadisticas"></div>
+        <div id="opcionGenerarOtra"></div>
+        <div id="cargando" class="cargando-overlay">
+            <div class="cargando-content">
+                <img src="loading.gif" alt="Cargando...">
+                <p>Generando historia...</p>
+            </div>
+        </div>
+        <div id="despedida" class="despedida-overlay">
+            <div class="despedida-content">
+                <h2>¡Hasta pronto!</h2>
+                <p>Gracias por usar el Generador de Historias.</p>
+            </div>
+        </div>
+    </div>
+    <div id="bienvenida" class="bienvenida-overlay">
+        <div class="bienvenida-content">
+            <h2>Bienvenido al Generador de Historias</h2>
+            <p>Responde las siguientes preguntas para generar una historia personalizada.</p>
+            <button id="okBtn">OK</button>
+        </div>
+    </div>
+    <script src="sistema.js"></script>
 </body>
 </html>
