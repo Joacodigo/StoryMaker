@@ -80,7 +80,7 @@ input[type="submit"]:hover {
     font-style: italic;
 }
 
-/* Estilos para el cartel de bienvenida */
+
 .bienvenida-overlay {
     position: fixed;
     top: 0;
@@ -193,7 +193,7 @@ input[type="submit"]:hover {
 }
 
 .despedida-content {
-    background-color: #333; /* Fondo oscuro */
+    background-color: #333; 
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -202,12 +202,12 @@ input[type="submit"]:hover {
 .despedida-content h2 {
     margin-top: 0;
     margin-bottom: 10px;
-    color: white; /* Texto blanco */
+    color: white; 
 }
 
 .despedida-content p {
     margin-bottom: 20px;
-    color: white; /* Texto blanco */
+    color: white; 
 }
 
 .despedida-content button {
