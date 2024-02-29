@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de Historias</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <div class="container">
-        <h1>Generador de Historias</h1>
-        <button id="comenzarBtn">¡Comenzar!</button>
-        <form id="formulario" class="formulario">
+        <h1 class="animate__animated animate__bounceInDown">Generador de Historias</h1>
+        <button id="comenzarBtn" class="animate__animated animate__backInLeft">¡Comenzar!</button>
+        <form id="formulario" class="formulario animate__animated animate__fadeIn">
             <!-- Aquí van los campos del formulario -->
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" required>
@@ -68,6 +69,7 @@
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
     <script src="sistema.js"></script>
 </body>
 </html>
